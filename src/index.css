@@ -61,6 +61,7 @@ body {
   padding: 5px;
   border-bottom: 1px rgba(0, 0, 0, 0.171) solid;
   cursor: pointer;
+  height: 70px;
 }
 
 .snippet:hover {
@@ -74,12 +75,23 @@ body {
 .snippet__image {
   max-width: 100px;
   width: 100%;
+  flex-basis: 15%;
+  height: 100%;
+  object-fit: scale-down;
 }
 
 .snippet__title {
-  flex-basis: 100%;
+  flex-basis: 70%;
 }
 
+.snippet__author, .snippet__title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.snippet__author {
+  flex-basis: 15%;
+}
 .btn {
   border: none;
   cursor: pointer;
@@ -98,7 +110,6 @@ body {
   background-color: rgb(80, 82, 83);
   color: white;
 }
-
 
 .modal {
   position: fixed;

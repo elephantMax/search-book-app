@@ -1,12 +1,16 @@
-const Snippet = ({toggleModal}) => {
+import failImage from '../no-image.svg'
+
+const Snippet = ({toggleModal, book}) => {
+    const { title, author_name } = book
+    const image = book.cover_i ? `http://covers.openlibrary.org/b/id/${book.cover_i}-S.jpg` : failImage
     return (
         <li className="snippet" onClick={toggleModal}>
-            <img className="snippet__image" src="https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg" alt="Snippet" />
+            <img className="snippet__image" src={image} alt="Snippet" />
             <strong className="snippet__title">
-                Title
+                {title}
             </strong>
             <span className="snippet__author" >
-                Author
+                {author_name}
             </span>
         </li>
     );
