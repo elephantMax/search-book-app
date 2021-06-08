@@ -53,6 +53,13 @@ body {
   overflow-y: auto;
 }
 
+.snipppets__fields {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
 .snippet {
   display: flex;
   justify-content: space-between;
