@@ -1,6 +1,6 @@
 import SnippetList from "./SnippetList"
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchBooks, setLoading } from '../store/slices/bookSlice'
+import { fetchBooks, setLoading, setBooks } from '../store/slices/bookSlice'
 import { useRef } from "react"
 
 const SearchForm = ({ toggleModal }) => {
@@ -22,6 +22,7 @@ const SearchForm = ({ toggleModal }) => {
     }
 
     const handleChange = () => {
+        dispatch(setBooks(null))
         if (timeout) {
             timeout = clearTimeout(timeout)
         }

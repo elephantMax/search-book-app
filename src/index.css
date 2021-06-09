@@ -97,7 +97,7 @@ body {
   text-overflow: ellipsis;
 }
 .snippet__author {
-  flex-basis: 15%;
+  flex-basis: 30%;
 }
 .btn {
   border: none;
@@ -131,6 +131,7 @@ body {
   box-shadow: 1px 1px 4px black;
   background-color: #fff;
   padding: 10px;
+  
 }
 
 .modal__footer {
@@ -145,4 +146,6 @@ body {
 
 .book__image {
   max-width: 100%;
+  max-height: 300px;
+  object-fit: scale-down;
 }
